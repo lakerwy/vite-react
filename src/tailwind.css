@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+}
+
+@layer utilities {
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size: revert;
+    /* 添加其他你想要恢复的默认样式 */
+}
+
+
