@@ -1,5 +1,6 @@
 import {Link, Outlet} from 'react-router-dom';
 import HeaderBid from "./headerBid.jsx";
+import TopMenu from "./topMenu.jsx";
 
 const layout = () => {
     return (
@@ -9,6 +10,7 @@ const layout = () => {
             </div>
             <div className="bidding-content">
                 <div className="top-menu pt-5 bidding-w">
+                    <TopMenu />
                 </div>
                 <Outlet/>
             </div>

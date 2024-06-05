@@ -5,10 +5,6 @@ import {Dropdown, Space, Menu} from 'antd';
 
 
 const headerBid = () => {
-    const location = useLocation();
-    useEffect(() => {
-        console.log(location)
-    })
     const handleClick = (e) => {
         console.log('click', e);
     };
