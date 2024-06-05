@@ -1,7 +1,7 @@
 import styles from "./home.module.scss";
-import { Button, DatePicker } from 'antd';
+import {Button, DatePicker} from 'antd';
 
-function home() {
+const home = () => {
     const [count, setCount] = useState(0)
     return (
         <div className={`${styles.home} bidding-w`}>

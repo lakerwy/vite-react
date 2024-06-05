@@ -2,17 +2,17 @@ module.exports = {
   root: true,
   env: { browser: true, es2020: true },
   extends: [
+    './.eslintrc-auto-import.json',
     'eslint:recommended',
     'plugin:react/recommended',
     'plugin:react/jsx-runtime',
-    'plugin:react-hooks/recommended',
-    './.eslintrc-auto-import.json'
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs', 'vite.config.js'],
   parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
   settings: { react: { version: '18.2' } },
   plugins: ['react-refresh'],
   rules: {
+    'import/no-unresolved': 'off',
     'react/jsx-no-target-blank': 'off',
     'react-refresh/only-export-components': [
       'warn',

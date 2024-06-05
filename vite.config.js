@@ -15,7 +15,7 @@ export default defineConfig(()=>{
       react(),
       reactRefresh(),
       AutoImport({
-        imports: ['react', 'react-router'],
+        imports: ['react','react-router-dom'],
         dts: r('src/auto-imports.d.ts'),
         eslintrc:{
           enabled:true,
