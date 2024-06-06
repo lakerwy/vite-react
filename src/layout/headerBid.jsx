@@ -4,9 +4,15 @@ import {Dropdown, Space, Menu, Button} from 'antd';
 
 
 const headerBid = () => {
+    const navigate = useNavigate();
     const handleClick = (e) => {
         console.log('click', e);
     };
+    const goHome = () => {
+        startTransition(()=>{
+            navigate('/home')
+        })
+    }
     const items = [
         {
             key: '1',
@@ -20,7 +26,7 @@ const headerBid = () => {
     return (
         <div className={styles.header} data-flex="main:justify cross:center">
             <div className={styles.logo}>
-                <img src={getImageUrl('logo5.png')} alt=""/>
+                <img className="cursor-pointer" src={getImageUrl('logo5.png')} onClick={()=>goHome()} alt=""/>
             </div>
             <ul className={styles.nav} data-flex="">
                 <div className={styles.unLogin} data-flex="cross:center">

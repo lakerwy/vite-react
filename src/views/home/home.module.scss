@@ -1,5 +1,107 @@
-.home {
-  h2 {
-    color: red;
+.banner {
+  height: 593px;
+  width: 100%;
+  background: url('../../assets/banner4.png') no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+  margin-bottom: 42px;
+  .bannerContent {
+    position: relative;
+    height: 100%;
+  }
+  .topMenu {
+    width: 100%;
+    position: absolute;
+    bottom: -20px;
+  }
+  .bannerLeft {
+    width: 632px;
+    padding-top: 1px;
+    h2 {
+      font-weight: bold;
+      font-size: 42px;
+      color: #ffffff;
+      line-height: 69px;
+      margin-top: 110px;
+      margin-bottom: 0.5em;
+      text-shadow: 0px 5px 6px rgba(0, 0, 0, 0.47);
+      span {
+        font-size: 36px;
+      }
+    }
+    .bidSearch {
+      box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.2);
+      border: none;
+    }
+  }
+  .bannerRight {
+    position: absolute;
+    width: 314px;
+    height: 359px;
+    background: url('../../assets/card-bg.png');
+    top: 118px;
+    right: 0;
+    padding: 22px 10px 22px 24px;
+    font-size: 14px;
+    color: #ffffff;
+    h3 {
+      font-weight: bold;
+      font-size: 16px;
+      color: #9bc7ff;
+    }
+    .card-head {
+      .tag {
+        height: 19px;
+        background: rgba(177, 194, 255, 0.12);
+        border-radius: 2px;
+        color: white;
+        text-align: center;
+        line-height: 19px;
+        padding: 0 5px;
+        font-size: 12px;
+        //letter-spacing: 2px;
+        cursor: pointer;
+      }
+      .call {
+        width: 90px;
+      }
+      .mine {
+        span {
+          color: #b1c2ff;
+        }
+      }
+      .overhide {
+        width: 45px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+    }
+    .card-content {
+      ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 横向2列 */
+        grid-template-rows: repeat(3, 1fr); /* 纵向3行 */
+        gap: 10px; /* 单元格之间的间距 */
+        padding: 10px 0;
+        li {
+          margin-bottom: 5px;
+          font-size: 12px;
+          cursor: pointer;
+        }
+      }
+    }
+    .card-fast {
+      li {
+        margin-top: 7px;
+        text-align: center;
+        cursor: pointer;
+        h4 {
+          margin-top: 5px;
+          font-size: 12px;
+          color: #ffffff;
+        }
+      }
+    }
   }
 }

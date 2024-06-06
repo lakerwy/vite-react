@@ -11,9 +11,9 @@ const layout = () => {
                 <HeaderBid/>
             </div>
             <div className="bidding-content">
-                <div className="top-menu pt-5 bidding-w">
-                    {!hideMenu && <TopMenu/>}
-                </div>
+                {!hideMenu && (<div className="top-menu pt-5 bidding-w">
+                    <TopMenu/>
+                </div>)}
                 <Outlet/>
             </div>
         </div>
