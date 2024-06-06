@@ -1,7 +1,6 @@
 import styles from './style/headerBid.module.scss'
 import {getImageUrl} from "@/utils/index.js";
-import {DownOutlined, SmileOutlined} from '@ant-design/icons';
-import {Dropdown, Space, Menu} from 'antd';
+import {Dropdown, Space, Menu, Button} from 'antd';
 
 
 const headerBid = () => {
@@ -24,6 +23,12 @@ const headerBid = () => {
                 <img src={getImageUrl('logo5.png')} alt=""/>
             </div>
             <ul className={styles.nav} data-flex="">
+                <div className={styles.unLogin} data-flex="cross:center">
+                    <div className={styles.login}>登录</div>
+                    <div className={styles.register}>
+                        <Button className={styles.myButton} type="primary">注册</Button>
+                    </div>
+                </div>
                 <div className={styles.hasLogin} data-flex="cross:center">
                     <Dropdown
                         menu={{
@@ -31,7 +36,7 @@ const headerBid = () => {
                         }}
                         placement="bottom"
                     >
-                        <a onClick={(e) => e.preventDefault()}>
+                        <a className="cursor-pointer" onClick={(e) => e.preventDefault()}>
                             测试fbl
                         </a>
                     </Dropdown>

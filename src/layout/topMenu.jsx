@@ -1,6 +1,5 @@
 import styles from './style/topMenu.module.scss'
 import { router } from "../router/router.jsx";
-import { matchRoutes, useMatches } from "react-router-dom";
 
 const navList = [
     {
@@ -32,8 +31,6 @@ const navList = [
 const topMenu = () => {
     const navigate = useNavigate();
     const location = useLocation()
-    const matchRoute = matchRoutes(router, location)
-    console.log(matchRoute)
     const handleClick = (item) => {
         startTransition(()=>{
             navigate(item.path);

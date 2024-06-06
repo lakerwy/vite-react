@@ -1,16 +1,18 @@
-import {Link, Outlet} from 'react-router-dom';
+import {Link, matchRoutes, Outlet} from 'react-router-dom';
 import HeaderBid from "./headerBid.jsx";
 import TopMenu from "./topMenu.jsx";
+import useShowMenu from "../hooks/useShowMenu.jsx";
 
 const layout = () => {
+    const hideMenu = useShowMenu()
     return (
         <div className="bidding-layout">
             <div className="bidding-header bidding-w">
-                <HeaderBid />
+                <HeaderBid/>
             </div>
             <div className="bidding-content">
                 <div className="top-menu pt-5 bidding-w">
-                    <TopMenu />
+                    {!hideMenu && <TopMenu/>}
                 </div>
                 <Outlet/>
             </div>

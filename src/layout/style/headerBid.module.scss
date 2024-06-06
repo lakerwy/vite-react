@@ -28,7 +28,7 @@
       }
       .register {
         margin-left: 30px;
-        .el-button {
+        .myButton  {
           width: 70px;
           background: #ff8032;
         }
@@ -36,12 +36,6 @@
     }
     .hasLogin {
       margin-left: 40px;
-      .ant-dropdown-trigger {
-        height: 30px;
-      }
-      .el-avatar--circle {
-        margin-right: 14px;
-      }
     }
   }
 }
