@@ -1,24 +1,5 @@
-import Layout from '@/layout'
 import { createBrowserRouter, Navigate } from 'react-router-dom'
+import {router} from "./router.jsx";
 
-const Router = createBrowserRouter([
-    {
-        path: '/',
-        element: <Navigate to="/home"/>
-    },
-    {
-        path: '/',
-        Component: Layout,
-        children: [
-            {
-                path: '/home',
-                Component: lazy(()=>import('@/views/home')),
-            },
-        ]
-    },
-    {
-        path: '*',
-        element: <Navigate to="/home"/>
-    },
-])
-export default Router
+
+export default createBrowserRouter(router)

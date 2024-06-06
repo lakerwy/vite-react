@@ -1,7 +1,7 @@
 import Layout from '@/layout'
-import { createBrowserRouter, Navigate } from 'react-router-dom'
+import {createBrowserRouter, Navigate} from 'react-router-dom'
 
-const Router = createBrowserRouter([
+export const router = [
     {
         path: '/',
         element: <Navigate to="/home"/>
@@ -12,23 +12,24 @@ const Router = createBrowserRouter([
         children: [
             {
                 path: '/home',
-                Component: lazy(()=>import('@/views/home')),
+                Component: lazy(() => import('@/views/home')),
+                hideMenu: true,
             },
             {
                 path: '/purchase',
-                Component: lazy(()=>import('@/views/purchase/index')),
+                Component: lazy(() => import('@/views/purchase')),
             },
             {
                 path: '/supplier',
-                Component: lazy(()=>import('@/views/supplier')),
+                Component: lazy(() => import('@/views/supplier')),
             },
             {
                 path: '/helpCenter',
-                Component: lazy(()=>import('@/views/helpCenter')),
+                Component: lazy(() => import('@/views/helpCenter')),
             },
             {
                 path: '/aboutUs',
-                Component: lazy(()=>import('@/views/aboutUs')),
+                Component: lazy(() => import('@/views/aboutUs')),
             },
         ]
     },
@@ -36,5 +37,4 @@ const Router = createBrowserRouter([
         path: '*',
         element: <Navigate to="/home"/>
     },
-])
-export default Router
+]

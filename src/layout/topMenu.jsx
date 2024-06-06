@@ -1,10 +1,12 @@
 import styles from './style/topMenu.module.scss'
+import { router } from "../router/router.jsx";
+import { matchRoutes, useMatches } from "react-router-dom";
 
 const navList = [
     {
         title: '首页',
         name: 'Bidding',
-        path: '/'
+        path: '/home'
     },
     {
         title: '采购信息',
@@ -29,15 +31,17 @@ const navList = [
 ]
 const topMenu = () => {
     const navigate = useNavigate();
-    const [active, setActive] = useState('Bidding')
+    const location = useLocation()
+    const matchRoute = matchRoutes(router, location)
+    console.log(matchRoute)
     const handleClick = (item) => {
-        console.log(item)
-        setActive(item.name)
-        // navigate(item.path);
+        startTransition(()=>{
+            navigate(item.path);
+        })
     }
     const items = navList.map((item) => {
         return (
-            <li key={item.name} className={active === item.name ? styles.active : undefined} onClick={e => handleClick(item)}>
+            <li key={item.name} className={item.path === location.pathname ? styles.active : undefined} onClick={e => handleClick(item)}>
                 {item.title}
             </li>
         )

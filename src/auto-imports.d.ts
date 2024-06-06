@@ -14,6 +14,7 @@ declare global {
   const createRef: typeof import('react')['createRef']
   const forwardRef: typeof import('react')['forwardRef']
   const lazy: typeof import('react')['lazy']
+  const matchRoutes: typeof import('react-router-dom')['matchRoutes']
   const memo: typeof import('react')['memo']
   const startTransition: typeof import('react')['startTransition']
   const useCallback: typeof import('react')['useCallback']
