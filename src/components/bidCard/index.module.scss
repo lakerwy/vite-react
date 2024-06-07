@@ -1,0 +1,16 @@
+.bidCard {
+  width: 100%;
+  background: #ffffff;
+  min-height: 354px;
+  .cardHeader {
+    min-height: 44px;
+    background: #eff5ff;
+    font-weight: bold;
+    font-size: 16px;
+    padding-left: 9px;
+    color: #3c69d1;
+  }
+  .cardContent {
+    padding: 10px;
+  }
+}

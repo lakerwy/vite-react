@@ -48,3 +48,12 @@ a, button, input, textarea {
         letter-spacing: 3px;
     }
 }
+
+
+body {
+    margin: 0;
+    font-size: 14px;
+    font-variant: tabular-nums;
+    line-height: 1.5715;
+    font-feature-settings: 'tnum';
+}

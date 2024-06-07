@@ -105,3 +105,51 @@
     }
   }
 }
+
+.board {
+  .notice {
+    height: 354px;
+    width: 718px;
+  }
+  .noticeInfo {
+    line-height: 45px;
+    background: #fff;
+    margin: 20px 0 20px 0px;
+    padding-left: 11px;
+    i {
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      background: url('../../assets/home/icon-tz.png');
+      margin-right: 7px;
+    }
+    .scroll {
+      height: 45px;
+      width: 400px;
+      overflow: hidden;
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 auto;
+        //display: flex;
+        li {
+          //width: 400px;
+          width: 1100px;
+          height: 45px;
+        }
+      }
+    }
+  }
+  .card-notice {
+    height: calc(100% - 44px);
+    padding: 10px 20px;
+    position: relative;
+    .el-pagination {
+      justify-content: center;
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
