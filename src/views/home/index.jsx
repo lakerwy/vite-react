@@ -2,18 +2,17 @@ import styles from "./home.module.scss";
 import {Button, DatePicker} from 'antd';
 import TopMenu from "../../layout/topMenu.jsx";
 import BidCard from "../../components/bidCard/index.jsx";
+import ListAnnounce from "./ListAnnounce.jsx"
 
 function Board() {
     return (
         <div className={styles.board} data-flex="dir:left box:first">
-            <BidCard className={`${styles.notice} mr-5`} title="通知公告" ></BidCard>
-            <BidCard title="关于我的" ></BidCard>
+            <BidCard className={`${styles.notice} mr-5`} title="通知公告"></BidCard>
+            <BidCard title="关于我的"></BidCard>
         </div>
     )
 }
-
 const home = () => {
-    const [count, setCount] = useState(0)
     return (
         <>
             <div className={`${styles.banner}`}>
@@ -44,9 +43,27 @@ const home = () => {
                 </div>
             </div>
             <div className="bidding-w">
-                <Board />
+                <Board/>
             </div>
-
+            {/*公告列表*/}
+            <div className="bidding-w pt-5 pb-5" data-flex="dir:left box:first">
+                <div className={`${styles.contentLeft} mr-5`}>
+                    <ListAnnounce listData={[]} title="竞价公告" className="mb-5"></ListAnnounce>
+                    <ListAnnounce listData={[]} title="询价公告" className="mb-5"></ListAnnounce>
+                    <ListAnnounce listData={[]} title="招标公告"></ListAnnounce>
+                </div>
+                <div className={styles.contentRight} data-flex="dir:top box:first">
+                    <BidCard className={`${styles.rightFirst} mb-5`} headerStyle={{background: '#EFF9FF', color: '#226AFF', height: '50px'}} title="服务专区"></BidCard>
+                    <BidCard title="资源统计" headerStyle={{background: '#EFF9FF', color: '#226AFF', height: '50px'}}></BidCard>
+                </div>
+            </div>
+            {/*供应商黑名单*/}
+            <div className={styles.blacklist}>
+                <div className="bidding-w">
+                    <BidCard title="供应商黑名单" headerStyle={{background: '#DFDFDF', color: '#333333', height: '50px'}} className={`${styles.blacklistCard} mb-5`}>
+                    </BidCard>
+                </div>
+            </div>
         </>
     )
 }

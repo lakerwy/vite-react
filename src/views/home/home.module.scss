@@ -153,3 +153,41 @@
     }
   }
 }
+
+.listAnnounce {
+  width: 100%;
+  h3 {
+    width: 62px;
+    height: 238px;
+    background: #3b8bf1;
+    font-weight: 500;
+    font-size: 18px;
+    color: #ffffff;
+    writing-mode: vertical-rl;
+    letter-spacing: 10px;
+    text-align: center;
+    line-height: 62px;
+    margin-bottom: 0;
+  }
+  ul {
+    background: white;
+    padding: 10px 20px;
+  }
+}
+.contentLeft {
+  width: 872px !important;
+}
+
+.contentRight {
+
+}
+
+.blacklist {
+  background: white;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  .blacklistCard {
+    height: 527px;
+    background: #f7f7f7;
+  }
+}
